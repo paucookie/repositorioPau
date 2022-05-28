@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Küki en línea</title><!-- Título de la página -->
+    <link rel="stylesheet" href="./CSS/index.css"><!-- CSS -->
+    <link rel="shortcut icon" href="./Images/logoTab.png"> <!-- Logo en el tab del explorador -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><!-- Fuente de Google -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Contenedor de Grid -->
+    <div id="gridContainer">
+        <!-- Logo -->
+        <header>
+            <a href="./index.html"><img src="./Images/Logo Kuki.png" alt="logokuki" ></a>
+        </header>
+        <!-- Menú -->
+        <nav>
+            <ul><!-- Opciones del Menú -->
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#">Productos</a>
+                    <ul>
+                        <li><a href="./Pages/Audio.html">Audio</a></li>
+                        <li><a href="./Pages/AccesoriosDeCelular.html">Accesorios de Celular</a></li>
+                        <li><a href="./Pages/gadgets.html">Gadgets</a></li>
+                    </ul></li>
+                <li><a href="./Pages/contacto.html">Contacto</a></li>
+            </ul>
+            <div><!-- iconos de carrito y usuario -->
+                <a href="#"><img src="./Images/shopping-cart-icon.png" height="18px"></a></li>
+                <a href="#article"><img src="./Images/user-icon.png" height="18px"></a></li>
+            </div>
+        </nav>
+        <!-- Contenido Principal -->
+        <main>
+            <img class="imagenHome" src="./Images/productosGeneral.png" alt="imagen de productos"><!-- Imagen Principal -->
+            <button class="bComprar">Ver Productos</button>
+            <br>
+            <br>
+        </main>
+        <!-- Redes Sociales -->
+        <aside>
+            <h2>¡Síguenos en nuestras redes sociales!</h2>
+         <br>
+         <ul>
+             <li><a href="https://www.facebook.com/kukienlinea/"><img src="./Images/facebook.png" alt="facebook icon" height="30"></a></li>
+             <li><a href="https://www.instagram.com/kukienlinea/"><img src="./Images/instagram.png" alt="instagram icon" height="30"></a></li>
+             <li><a href="https://api.whatsapp.com/send?phone=529611650194"><img src="./Images/whatsapp.png" alt="whatsapp icon" height="30"></a></li>
+         </ul>
+         <br>
+        </aside>
+        <!-- Productos Nuevos -->
+       <article>
+            <h2>PRODUCTOS NUEVOS</h2>
+            <div>
+                <img src="./Images/alcancia verde.jpg" alt="alcancia verde">
+                <img src="./Images/cargador rapido.jpg" alt="cargador v8">
+                <img src="./Images/cargador tipo c.jpg" alt="cargador tipo c">
+                <img src="./Images/cargador iphone 1m.jpg" alt="cargador iphone1m">
+                <img src="./Images/alcancia.jpg" alt="alcancia rosa">
+            </div>
+        </article id="article">
+        <!-- Sección de Usuario Nuevo y Mapa -->
+        <section> 
+            <div class="usuarioNuevo">
+                <h2>Usuario Nuevo</h2><!-- Usuario Nuevo -->
+            <br>
+            <h4>
+                <form action="enviar.php" methods="get" enctype="text/plain">
+                         
+                    <div> <!-- Nombre -->      
+                        <label for="nombre">Nombre: </label>
+                        <input type="text" id="nombre" placeholder="Ingrese su nombre">
+                    </div>
+                    <br>
+                         
+                    <div><!-- Sexo -->
+                        <label for="sexo">Sexo : </label>
+                        <input type="radio" name="hm" value="h"> Hombre
+                        <input type="radio" name="hm" value="m"> Mujer
+                    </div>
+                    <br>  
+                    <div><!-- E-mail -->
+                        <label for="email">E-mail: </label>
+                        <input type="email" id="email" placeholder="Ingrese su email" required>
+                    </div>
+                    <br>
+                    <div><!-- Password -->
+                        <label for="pass">Password: </label>
+                        <input type="password" id="pass" placeholder="Ingrese contraseña de 8 dígitos" required>
+                    </div>
+                    <br>        
+                    <div><!-- País -->
+                        <label for="pais">País: </label>
+                        <select name="pais" id="pais">
+                            <option value="00">Selecciona tu país</option>
+                            <option value="01">México</option>
+                            <option value="02">Argentina</option>
+                            <option value="03">Chile</option>
+                            <option value="04">Colombia</option>
+                            <option value="05">Perú</option>
+                        </select>
+                    </div>
+                    <br>
+                    <!-- Boton de enviar -->
+                    <input type="submit" value="  Enviar ahora  ">
+                </form>
+            </h4>
+            </div>
+            <div class="mapa"><!-- Napa de Google a lado -->
+                <div class="mapouter"><div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=kuki&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-a.com"></a><br><style>.mapouter{position:relative;text-align:right;}</style><a href="https://www.embedgooglemap.net">embed custom google map</a><style>.gmap_canvas {overflow:hidden;background:none!important;}</style></div></div>
+            </div>
+            
+        </section>
+        <!-- Píe de Página -->
+        <footer>
+            <br>
+            <p>&copy; Küki en línea  | 3a. Norte Poniente No. 515 Local 3 Colonia Terán, Tuxtla Gutiérrez, Chiapas, México, CP. 29020.    
+            <adress>
+                <a href="mailto:kukienlinea@gmail.com">   Contactanos</a>
+            </adress>
+            </p>
+            <br>
+        </footer>
+
+    </div>
+
+
+
+</body>
+</html>
