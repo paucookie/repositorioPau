@@ -132,7 +132,7 @@ main {
         outline: none;
         border-radius: 5px;
         border: none;
-        background: #f58a51;
+        background-image: linear-gradient(315deg, #833ab4 0%, #fd1d1d 50%, #fcb045);
         box-shadow: 0 5px #ED6F14;
         display: block;
         margin-top: -40px;
@@ -216,6 +216,35 @@ section form {
     width: 80%;
     margin: 0 auto;
 }
+
+.bEnviar{
+    min-width: 150px;
+    height: 35px;
+    color: #fff;
+    padding: 5px 10px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    background-image: linear-gradient(315deg, #833ab4 0%, #fd1d1d 50%, #fcb045);
+    box-shadow: 0 5px #ED6F14;
+    display: block;
+    animation: aparecer 3s;
+}
+  .bEnviar:hover {
+    box-shadow: 0 3px #ED6F14;
+    top: 1px;
+  }
+  .bEnviar:active {
+    box-shadow: 0 0 #ED6F14;
+    top: 5px;
+  }
 
 
 .mapoter {
