@@ -253,6 +253,10 @@ footer a:hover{
         height: 40px;
         font-size: 17px;
     }
+    
+    nav{
+        padding-right: 0px;
+    }
        
     nav ul a{/* link menú */
         font-size: 15px;
@@ -277,26 +281,12 @@ footer a:hover{
         width: 80%;
     }
     
-    .usuarioNuevo{
-        
-    }
     section h4{
         font-size: 13px;
         
     }
     
-    section form{
-    
-        /* padding-bottom: 20px; */
-    }
-    
-    .mapa { /* mapa */
-        /* padding-left: 0px */
-    }
-    .mapoter {
 
-        
-    }
     .gmap_canvas {
         margin: 0 auto;
         width: 250px;
