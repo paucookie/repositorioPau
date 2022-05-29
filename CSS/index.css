@@ -90,7 +90,7 @@ body {
     background-size: cover;
     font-family: 'Rubik', sans-serif;
 }
-
+/* -----------Info principal ------------ */
 main {
     grid-area: info;
     display: flex;
@@ -102,6 +102,19 @@ main {
         margin: 0 auto;
         max-width: 100%;
         width: 80%;
+    }
+
+    /* Animación de aparecer */
+    @keyframes aparecer {
+        0%{
+            opacity: 0%;
+        }
+        50%{
+            opacity: 50%;
+        }
+        100%{
+            opacity: 100%;
+        }
     }
 
     .bComprar {/* Botón de comprar */
@@ -125,6 +138,7 @@ main {
         margin-top: -40px;
         margin-left: auto;
         margin-right: auto;
+        animation: aparecer 3s;
     }
       .bComprar:hover {
         box-shadow: 0 3px #ED6F14;
