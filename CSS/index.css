@@ -312,21 +312,14 @@ footer a:hover{
         width: 80%;
     }
     
-<<<<<<< HEAD
-=======
-    
->>>>>>> master
     section h4{
         font-size: 13px;
-        
     }
     
-
     .gmap_canvas {
         margin: 0 auto;
         width: 250px;
         height: 250px;
-        
     }
     
 }
