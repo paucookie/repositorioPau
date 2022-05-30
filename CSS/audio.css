@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
 }
-/*--------- Contenedor de Grid-------- */
+/*--------- LAYOUT Contenedor de Grid-------- */
 #gridContainer{
     display: grid;
     grid-template-areas: 
@@ -58,6 +58,7 @@ nav{
         font-weight: 700;
     }
 
+
     nav ul ul{/* Submenú */
         display: flex;
         flex-direction: column;
@@ -108,24 +109,24 @@ main{
     margin: 0 auto;
     margin-top: 35px;
     margin-bottom: 35px;
-    gap: 20px;
+    gap: 50px;
+    animation: aparecer 3s;
 }
     
 .container div{
         margin: 0 auto;
-        height: 245px;
-        width: 220px;
+        /* height: 245px; */
+        /* width: 220px; */
     } 
 
 .audioImg {/* Imagen de producto */
-    height:220px;
-    width: 220px;
+    /* height:220px; */
+    width: 100%;
     }
     
 
 /*------------ Píe de página -----------*/        
 footer{
-    background: #1f1e1f;
     color: #cef0fa;
     grid-area: pie;
     display:flex;
@@ -133,6 +134,7 @@ footer{
     align-items: center;
     font-size: 13px;
     padding: 20px;
+    background-image: linear-gradient(60deg, black, #1f1e1f, #353435);
 }
 
 footer a{
@@ -147,7 +149,7 @@ footer a:hover{
 }
 
 /* ------------Media Queries ------------- */
-@media (min-width: 375px) and (max-width: 600px) {/* Pantalla de Celular */
+@media (min-width: 10px) and (max-width: 600px) {/* Pantalla de Celular */
     #gridContainer {
         grid-template-rows: 42px auto auto auto 600px auto;/* contenedor del grid */
     } 
@@ -158,6 +160,10 @@ footer a:hover{
     header img{/* imagen */
         height: 25px;
     }
+    nav{/* Menú */
+        padding-right: 0px;
+    }
+
     nav ul a{/* link menú */
         font-size: 15px;
         padding: 8px;
@@ -166,7 +172,22 @@ footer a:hover{
     main h1 {/* los titulos de las secciones */
         font-size: 20px;
     }
-    .container {
+    .container {/* IMAGENES */
         grid-template-columns: 1fr 1fr;
+        width: 90%;
+        gap:25px;
+    }
+}
+
+/* --------------Animaciones y efectos--------- */
+@keyframes aparecer {/* de los botones */
+    0%{
+        opacity: 0%;
+    }
+    50%{
+        opacity: 50%;
+    }
+    100%{
+        opacity: 100%;
     }
 }
