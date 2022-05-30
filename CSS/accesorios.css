@@ -109,19 +109,22 @@ main{
         margin: 0 auto;
         margin-top: 35px;
         margin-bottom: 35px;
-        gap: 20px;
+        gap: 50px;
+        animation: aparecer 3s;
     }
         
     .container div{
             margin: 0 auto;
-            height: 245px;
-            width: 220px;
         } 
     
     .celImg {/* Imagen de producto */
-        height:220px;
-        width: 220px;
+        width: 100%;
+        transform: scale(1,1);
         }
+
+    .celImg:hover {
+        transform: scale(1.025,1.025);
+    }
  /* ---------Píe de página----------- */       
 footer{
     background: #1f1e1f;
@@ -158,6 +161,9 @@ footer a:hover{
     header img{/* imagen */
         height: 25px;
     }
+    nav{/* Menú */
+        padding-right: 0px;
+    }
     nav ul a{/* link menú */
         font-size: 15px;
         padding: 8px;
@@ -168,5 +174,20 @@ footer a:hover{
     }
     .container {
         grid-template-columns: 1fr 1fr;
+        width: 90%;
+        gap: 25px;
+    }
+}
+
+/* --------------Animaciones y efectos--------- */
+@keyframes aparecer {/* de los botones */
+    0%{
+        opacity: 0%;
+    }
+    50%{
+        opacity: 50%;
+    }
+    100%{
+        opacity: 100%;
     }
 }
