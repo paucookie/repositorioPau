@@ -90,7 +90,7 @@ body {
     background-size: cover;
     font-family: 'Rubik', sans-serif;
 }
-
+/* -----------Info principal ------------ */
 main {
     grid-area: info;
     display: flex;
@@ -103,6 +103,7 @@ main {
         max-width: 100%;
         width: 80%;
     }
+
 
     .bComprar {/* Botón de comprar */
         min-width: 250px;
@@ -119,12 +120,13 @@ main {
         outline: none;
         border-radius: 5px;
         border: none;
-        background: #f58a51;
+        background-image: linear-gradient(315deg, #833ab4 0%, #fd1d1d 50%, #fcb045);
         box-shadow: 0 5px #ED6F14;
         display: block;
         margin-top: -40px;
         margin-left: auto;
         margin-right: auto;
+        animation: aparecer 3s;
     }
       .bComprar:hover {
         box-shadow: 0 3px #ED6F14;
@@ -203,6 +205,35 @@ section form {
     margin: 0 auto;
 }
 
+.bEnviar{
+    min-width: 150px;
+    height: 35px;
+    color: #fff;
+    padding: 5px 10px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    background-image: linear-gradient(315deg, #833ab4 0%, #fd1d1d 50%, #fcb045);
+    box-shadow: 0 5px #ED6F14;
+    display: block;
+    animation: aparecer 3s;
+}
+  .bEnviar:hover {
+    box-shadow: 0 3px #ED6F14;
+    top: 1px;
+  }
+  .bEnviar:active {
+    box-shadow: 0 0 #ED6F14;
+    top: 5px;
+  }
+
 
 .mapoter {
     width:100%;
@@ -214,7 +245,7 @@ section form {
 
 /* ----------Píe de Página---------- */
 footer{
-    background: #1f1e1f;
+    background-image: linear-gradient(60deg, black, #1f1e1f, #353435);;
     color: #cef0fa;
     grid-area: pie;
     display:flex;
@@ -236,7 +267,7 @@ footer a:hover{
 }
 
 /* ----------Responsive ------------ */
-@media (min-width: 300px) and (max-width: 600px) {/* Pantalla de Celular */
+@media (min-width: 100px) and (max-width: 600px) {/* Pantalla de Celular */
     #gridContainer {
         grid-template-rows: 42px auto auto auto 600px auto;/* contenedor del grid */
     } 
@@ -252,6 +283,10 @@ footer a:hover{
         min-width: 200px;
         height: 40px;
         font-size: 17px;
+    }
+    
+    nav{/* Menú */
+        padding-right: 0px;
     }
        
     nav ul a{/* link menú */
@@ -277,7 +312,6 @@ footer a:hover{
         width: 80%;
     }
     
-    
     section h4{
         font-size: 13px;
         
@@ -293,3 +327,15 @@ footer a:hover{
     
 }
 
+/* --------------Animaciones y efectos--------- */
+    @keyframes aparecer {/* de los botones */
+        0%{
+            opacity: 0%;
+        }
+        50%{
+            opacity: 50%;
+        }
+        100%{
+            opacity: 100%;
+        }
+    }
