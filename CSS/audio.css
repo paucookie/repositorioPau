@@ -115,14 +115,16 @@ main{
     
 .container div{
         margin: 0 auto;
-        /* height: 245px; */
-        /* width: 220px; */
     } 
 
 .audioImg {/* Imagen de producto */
-    /* height:220px; */
     width: 100%;
+    transform: scale(1,1);
     }
+
+.audioImg:hover {
+    transform: scale(1.025,1.025);
+}
     
 
 /*------------ Píe de página -----------*/        
