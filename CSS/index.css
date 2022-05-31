@@ -6,7 +6,7 @@
 #gridContainer{
     display:grid;
     grid-template-areas: 
-        "logo menu menu"
+        "menu menu menu"
         "info info info"
         "redes redes redes"
         "prod prod prod"
@@ -14,73 +14,19 @@
         "pie pie pie";
     height: 100vh; /* 100% el ancho del viewport */
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 70px auto 120px auto auto auto;
-}
-/* Contenedor del Logo */
-header {
-    background: white;
-    box-shadow: rgba(33, 35, 38, 0.1) 0px 20px 20px -20px;
-    display:flex;
-    justify-content: left;
-    align-items: center;
-    padding-left: 30px;
-    grid-area: logo;
+    grid-template-rows: 70px auto auto auto auto auto;
 }
 
-header img{
+/* ---------Menú de Navegación------ */
+
+nav{
+    grid-area: menu;
+}
+
+/* Imagen del Logo */
+.navbar-brand img{
     height: 48px;
 }
-
-/* Contenedor del Menú */
-nav{
-    background: white;
-    box-shadow: rgba(33, 35, 38, 0.1) 0px 20px 20px -20px;
-    grid-area: menu;
-    display: flex;
-    justify-content: right;
-    padding-right: 30px;
-    align-items: center;
-    font-family: 'Rubik', sans-serif;
-}
-
-    nav ul{/* Menú */
-        list-style: none;
-        display: flex;
-    }
-
-    nav ul a{/* link menú */
-        text-decoration: none;
-        font-size: 18px;
-        color: #26BCEB;
-        padding: 12px 40px;
-        display: block;
-    }
-
-    nav ul a:hover{/* cuando pasas encima del menú */
-        color: #EF7B3D;
-        font-weight: 700;
-    }
-
-    nav ul ul{/* Submenú */
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        background-color: white;
-        color: #EF7B3D;
-        display: none;
-    }
-
-    nav ul li:hover ul{/* Encima del título de submenú */
-        display: block;
-    }
-    
-    nav div {/* carrito y usuario */
-        display: flex;
-    }
-
-    nav div a{
-        padding: 15px;
-    }
 
 /* cuerpo de la pagina */
 body { 
@@ -93,49 +39,10 @@ body {
 /* -----------Info principal ------------ */
 main {
     grid-area: info;
-    display: flex;
-    flex-direction: column;
-}
+    justify-content: center;
+    margin: 0 auto;
+} 
 
-    .imagenHome {/* imagen de Inicio */
-        display: block;
-        margin: 0 auto;
-        max-width: 100%;
-        width: 80%;
-    }
-
-
-    .bComprar {/* Botón de comprar */
-        min-width: 250px;
-        height: 50px;
-        color: #fff;
-        padding: 5px 10px;
-        font-family: 'Rubik', sans-serif;
-        font-weight: 700;
-        font-size: 20px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        position: relative;
-        display: inline-block;
-        outline: none;
-        border-radius: 5px;
-        border: none;
-        background-image: linear-gradient(315deg, #833ab4 0%, #fd1d1d 50%, #fcb045);
-        box-shadow: 0 5px #ED6F14;
-        display: block;
-        margin-top: -40px;
-        margin-left: auto;
-        margin-right: auto;
-        animation: aparecer 3s;
-    }
-      .bComprar:hover {
-        box-shadow: 0 3px #ED6F14;
-        top: 1px;
-      }
-      .bComprar:active {
-        box-shadow: 0 0 #ED6F14;
-        top: 5px;
-      }
 
 /* -----Redes Sociales ------- */
 aside{
@@ -269,7 +176,7 @@ footer a:hover{
 /* ----------Responsive ------------ */
 @media (min-width: 100px) and (max-width: 600px) {/* Pantalla de Celular */
     #gridContainer {
-        grid-template-rows: 42px auto auto auto 600px auto;/* contenedor del grid */
+        grid-template-rows: 70px auto auto auto 600px auto;/* contenedor del grid */
     } 
 
     header {/* Contenedor del Logo */
@@ -324,6 +231,12 @@ footer a:hover{
     
 }
 
+@media (min-width: 1250px){
+    .carousel-inner img{
+        max-width: 1250px;
+        margin: 0 auto;
+    }
+}
 /* --------------Animaciones y efectos--------- */
     @keyframes aparecer {/* de los botones */
         0%{
