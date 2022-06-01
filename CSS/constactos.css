@@ -2,82 +2,39 @@
     margin: 0;
     padding: 0;
 }
-/*--------- Contenedor de Grid-------- */
-#gridContainer{
-    display: grid;
-    grid-template-areas: 
-        "logo menu menu"
-        "info info info"
-        "pie pie pie";
-    height: 100vh;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 70px auto auto;
-}
-/*----------- Contenedor de Logo ---------*/
-header {
-    background: white;
-    box-shadow: rgba(33, 35, 38, 0.1) 0px 20px 20px -20px;
+
+/* ------Menu de navegacion---- */
+.nav {
     display: flex;
-    justify-content: left;
-    align-items: center;
-    padding-left: 30px;
-    grid-area: logo;
-}
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    height: 58px;
+  } 
+  
+  .nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none; 
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  }
 
-header img{/* Foto Logo */
-    height: 48px;
-}
-
-/*------------ Contenedor del Menú ------------*/
-nav{
-    background: white;
-    box-shadow: rgba(33, 35, 38, 0.1) 0px 20px 20px -20px;
-    grid-area: menu;
+.navbar {
+    position: relative;
     display: flex;
-    justify-content: right;
-    padding-right: 30px;
+    flex-wrap: wrap;
     align-items: center;
-    font-family: 'Rubik', sans-serif;
-}
+    justify-content: space-between;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background: rgba( 255, 254, 254, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+} 
 
-    nav ul{/* Menú */
-        list-style: none;
-        display: flex;
-    }
-
-    nav ul a{/* link de Menú */
-        text-decoration: none;
-        font-size: 18px;
-        color: #26BCEB;
-        padding: 12px 40px;
-        display: block;
-    }
-
-    nav ul a:hover{/* cuando paso encima del Menú */
-        color:#EF7B3D;
-        font-weight: 700;
-    }
-
-    nav ul ul{/* Submenú */
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        background-color: white;
-        color:#EF7B3D;
-        display: none;
-    }
-
-    nav ul li:hover ul{/* Encima del submenú */
-        display:block;
-    }
-    
-    nav div{/* Carrito y usuario */
-        display: flex;
-    }
-
-    nav div a{
-        padding: 15px;
-    }
 
 /* ------------cuerpo de la pagina -------------*/
 body { 
@@ -88,119 +45,54 @@ body {
     font-family: 'Rubik', sans-serif;
 }
 
-/*------------ Grid del Contenido Principal -----------*/
-main{
-    grid-area: info;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: center;
-    max-width: 1250px;
-    margin: 0 auto;
-    margin-top: 35px;
-    margin-bottom: 0px;
-}
-
-    main h1{/* Título */
-        text-align: center;
-        font-size: 25px;
-        padding-bottom: 20px;
-        color: #eeedee;
-    }
-    .contactForm{/* Contenedor del formulario */
-        margin: 40px;
-        border-radius: 12px;
-        width: 80%;
-        height:auto;
-        padding-top: 30px;
-        background-color: rgb(32, 32, 32);
-        padding-left: 30px;
-    }
-    
-    input {/* Cuadritos */
-        background-color: #464646;
-        border-radius: 5px;
-        border-style: solid;
-        border-width: 1px;
-        border-color: rgb(173, 173, 173);
-        width: 90%;
-        height: 30px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-
-    }
-    
-    textarea {/* Cuadro de Comentarios */
-        background-color: #464646;
-        border-radius: 5px;
-        border-style: solid;
-        border-width: 1px;
-        border-color: rgb(173, 173, 173);
-        width: 85%;
-        height: 150px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        padding-top: 5px;
-        padding-left: 20px;
-    }
-    
-    label {/* Los textos */
-        display: block;
-        align-items: center;
-    }
-    
-    button {/* boton de enviar */
-        min-width: 130px;
-        height: 40px;
-        padding: 5px 10px;
-        font-weight: bold;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        position: relative;
-        display: inline-block;
-        outline: none;
-        border: 1px solid white;
-        border-radius: 10px;
-        color: white;
-        background: transparent;
-        text-transform: uppercase;
-    }
-    
-    button p{
-        color:rgb(255, 254, 254);
-        font-weight: bold;
-    }
-
-    button:hover {
-        background-color: #858383;
-    }
-
-    h3{/* Escribenos... */
-        font-size: 14px;
-        padding-bottom: 20px;
-        color:#eeedee;
-        font-weight: 400;
-        width: 90%;
-        text-justify: newspaper;
-    }
-    
-    p {/* Requisitos */
-        font-size: 12px;
-        color:#eeedee
-    }
-    
-    .mapa {/* Contenedor del Mapa */
-        margin: 40px;
-        border-radius: 12px;
-        height:auto;
-        padding-left: 30px;
-        animation: aparecer 3s;
-    }
-    .gmap_canvas{
-        width: 100%;
-    }
-    .mapouter{
-        width: 100%;
-    }
+/* ------ Formulario--------- */
+section#contact .section-heading {
+    color: #fff;
+  }
+  section#contact form#contactForm .form-group {
+    margin-bottom: 1.5rem;
+  }
+  section#contact form#contactForm .form-group input,
+  section#contact form#contactForm .form-group textarea {
+    padding: 1.25rem;
+  }
+  section#contact form#contactForm .form-group input.form-control {
+    height: auto;
+  }
+  section#contact form#contactForm .form-group-textarea {
+    height: 100%;
+  }
+  section#contact form#contactForm .form-group-textarea textarea {
+    height: 100%;
+    min-height: 10rem;
+  }
+  section#contact form#contactForm p.help-block {
+    margin: 0;
+  }
+  section#contact form#contactForm .form-control:focus {
+    border-color: #ffc800;
+    box-shadow: none;
+  }
+  section#contact form#contactForm ::-webkit-input-placeholder {
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 700;
+    color: #ced4da;
+  }
+  section#contact form#contactForm :-moz-placeholder {
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 700;
+    color: #ced4da;
+  }
+  section#contact form#contactForm ::-moz-placeholder {
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 700;
+    color: #ced4da;
+  }
+  section#contact form#contactForm :-ms-input-placeholder {
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 700;
+    color: #ced4da;
+  }
 /*------------ Píe de página -----------*/        
 footer{
     background-image: linear-gradient(60deg, black, #1f1e1f, #353435);;
@@ -209,7 +101,6 @@ footer{
     display:flex;
     justify-content: center;
     align-items: center;
-    font-size: 13px;
     padding: 20px;
 }
 
@@ -224,53 +115,13 @@ footer a:hover{
     color:#26BCEB
 }
 
-/* ------------Media Queries ------------- */
-@media (min-width: 100px) and (max-width: 600px) {/* Pantalla de Celular */
-    #gridContainer {
-        grid-template-rows: 42px auto auto auto 600px auto;/* contenedor del grid */
-    } 
-
-    header {/* Contenedor del Logo */
-        padding-left: 10px;
-    }
-    header img{/* imagen */
-        height: 25px;
-    }
-    nav{/* menu */
-        padding-right: 0px;
-    }
-    nav ul a{/* link menú */
-        font-size: 15px;
-        padding: 8px;
-    }
-    main{/* grid del contenido general */
-        grid-template-columns: 1fr;
-    }
-    main h1 {/* los titulos de las secciones */
-        font-size: 20px;
-    }
-
-    .contactForm{/* formulario */
-        margin: 0 auto;
-        padding-left: 30px;
-    }
-
-    button{
-        height: 30px;
-        margin-bottom: 10px;
-    }
-    .mapa{
-        margin: 0 auto;
-        min-width: 90%;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    .gmap_canvas{
-        margin: 0 auto;
-        height: 250px;
-        width: 250px;
-    }
+footer a{
+    margin-right: 10px;
 }
+footer img{
+    margin-right: 10px;
+}
+
 
 /* --------------Animaciones y efectos--------- */
 @keyframes aparecer {/* de los botones */
