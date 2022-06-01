@@ -1,193 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Título de la página -->
-    <title>Küki en línea</title>
-    <!-- CSS -->
-    <link rel="stylesheet" href="./CSS/index.css">
-    <!-- Logo en el tab del explorador -->
-    <link rel="shortcut icon" href="./Images/logoTab.png"> 
-    <!-- Fuente de Google -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-</head>
-<body>
-    <!-- Contenedor de Grid -->
-    <div id="gridContainer">
-        <!-- Menú -->
-        <nav class="navbar navbar-expand-lg bg-light">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="./index.html"><img src="./Images/Logo Kuki.png" alt="logokuki" height="48px"></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Productos
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="./Pages/Audio.html">Audio</a></li>
-                      <li><a class="dropdown-item" href="./Pages/AccesoriosDeCelular.html">Accesorios de Celular</a></li>
-                      <li><a class="dropdown-item" href="./Pages/gadgets.html">Gadgets</a></li>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <!-- Título de la página -->
+        <title>Küki en línea</title>
+        <!-- CSS -->
+        <link rel="stylesheet" href="./CSS/index.css">
+        <!-- Logo en el tab del explorador -->
+        <link rel="shortcut icon" href="./Images/logoTab.png"> 
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light navbar-custom fixed-top">
+            <div class="container px-5">
+                <a class="navbar-brand" href="#page-top"><img src="./Images/Logo Kuki.png" alt="logokuki" height="48px"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./Pages/Audio.html">Audio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./Pages/AccesoriosDeCelular.html">Accesorio de Celular</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./Pages/gadgets.html">Gadgets</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./Pages/contacto.html">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./Pages/gadgets.html">Gadgets</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><img src="./Images/user-icon.png" alt="icono de usuario" height="18px"></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><img src="./Images/shopping-cart-icon.png" alt="icono de carrito" height="18px"></a></li>
                     </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./Pages/contacto.html">Contacto</a>
-                  </li>
-                </ul>
-                <form class="d-flex" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-info" type="submit">Search</button>
-                </form>
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href=""><img src="./Images/user-icon.png" alt="icono de usuario" height="18px"></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href=""><img src="./Images/shopping-cart-icon.png" alt="icono de carrito" height="18px"></a>
-                      </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-        <!-- Contenido Principal -->
-        <main>
-            <!-- Imagen Principal -->
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-                <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="./Images/productosGeneral.png" class="d-block w-100" alt="productos en general">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="./Images/BeatsMickey.png" class="d-block w-100" alt="beats de Mickey Mouse">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="./Images/BocinaMoreka.png" class="d-block w-100" alt="Bocinas de Moreka">
-                  </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header class="masthead text-center text-white">
+            <div class="masthead-content">
+                <div class="container px-5">
+                    <!-- Carrusel -->
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                        <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="./Images/productosGeneral.png" class="d-block w-100" alt="productos en general">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="./Images/BeatsMickey.png" class="d-block w-100" alt="beats de Mickey Mouse">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="./Images/BocinaMoreka.png" class="d-block w-100" alt="Bocinas de Moreka">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                    <div>
+                    <!--Sigue Header normal-->
+                    <h1 class="masthead-heading mb-0">Lo más nuevo</h1>
+                    <h2 class="masthead-subheading mb-0">Aprovecha el Hotsale</h2>
+                    <a class="btn btn-warning btn-xl rounded-pill mt-5" href="#scroll">Compra aquí</a>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-            <div>
-                <button type="button" class="btn btn-warning btn-lg position-absolute start-50 translate-middle-x">Ver Productos</button>
             </div>
-                
-            </p>
-            <br>
-            <br>
-        </main>
-        <!-- Redes Sociales -->
-        <aside>
-            <h2>¡Síguenos en nuestras redes sociales!</h2>
-         <br>
-         <ul>
-             <li><a href="https://www.facebook.com/kukienlinea/"><img src="./Images/facebook.png" alt="facebook icon" height="30"></a></li>
-             <li><a href="https://www.instagram.com/kukienlinea/"><img src="./Images/instagram.png" alt="instagram icon" height="30"></a></li>
-             <li><a href="https://api.whatsapp.com/send?phone=529611650194"><img src="./Images/whatsapp.png" alt="whatsapp icon" height="30"></a></li>
-         </ul>
-         <br>
-        </aside>
-        <!-- Productos Nuevos -->
-       <article>
-            <h2>PRODUCTOS NUEVOS</h2>
-            <div>
-                <img src="./Images/alcancia verde.jpg" alt="alcancia verde">
-                <img src="./Images/cargador rapido.jpg" alt="cargador v8">
-                <img src="./Images/cargador tipo c.jpg" alt="cargador tipo c">
-                <img src="./Images/cargador iphone 1m.jpg" alt="cargador iphone1m">
-                <img src="./Images/alcancia.jpg" alt="alcancia rosa">
+            <div class="bg-circle-1 bg-circle"></div>
+            <div class="bg-circle-2 bg-circle"></div>
+            <div class="bg-circle-3 bg-circle"></div>
+            <div class="bg-circle-4 bg-circle"></div>
+        </header>
+        <!-- Content section 1-->
+        <section id="scroll">
+            <div class="container px-5">
+                <div class="row gx-5 align-items-center">
+                    <div class="col-lg-6 order-lg-2">
+                        <div class="p-5"><img class="img-fluid rounded-circle" src="./Images/alcancia.jpg" alt="alcancia rosa" /></div>
+                    </div>
+                    <div class="col-lg-6 order-lg-1">
+                        <div class="p-5">
+                            <h2 class="display-4">Productos Nuevos...</h2>
+                            <p>Alcancía inteligente</p>
+                            <p>Descripción del producto</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium cumque expedita ducimus esse magni beatae vero reiciendis sapiente veritatis tempora! Molestias magni rem repudiandae fugit voluptas excepturi consequuntur provident officia?</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </article id="article">
-        <!-- Sección de Usuario Nuevo y Mapa -->
-        <section> 
-            <div class="usuarioNuevo">
-                <h2>Usuario Nuevo</h2><!-- Usuario Nuevo -->
-            <br>
-            <h4>
-                <form action="enviar.php" methods="get" enctype="text/plain">
-                         
-                    <div> <!-- Nombre -->      
-                        <label for="nombre">Nombre: </label>
-                        <input type="text" id="nombre" placeholder="Ingrese su nombre">
-                    </div>
-                    <br>
-                         
-                    <div><!-- Sexo -->
-                        <label for="sexo">Sexo : </label>
-                        <input type="radio" name="hm" value="h"> Hombre
-                        <input type="radio" name="hm" value="m"> Mujer
-                    </div>
-                    <br>  
-                    <div><!-- E-mail -->
-                        <label for="email">E-mail: </label>
-                        <input type="email" id="email" placeholder="Ingrese su email" required>
-                    </div>
-                    <br>
-                    <div><!-- Password -->
-                        <label for="pass">Password: </label>
-                        <input type="password" id="pass" placeholder="Ingrese contraseña de 8 dígitos" required>
-                    </div>
-                    <br>        
-                    <div><!-- País -->
-                        <label for="pais">País: </label>
-                        <select name="pais" id="pais">
-                            <option value="00">Selecciona tu país</option>
-                            <option value="01">México</option>
-                            <option value="02">Argentina</option>
-                            <option value="03">Chile</option>
-                            <option value="04">Colombia</option>
-                            <option value="05">Perú</option>
-                        </select>
-                    </div>
-                    <br>
-                    <!-- Boton de enviar -->
-                    <input class="bEnviar" type="submit" value="  Enviar ahora  ">
-                </form>
-            </h4>
-            </div>
-            <div class="mapa"><!-- Napa de Google a lado -->
-                <div class="mapouter"><div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=kuki&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-a.com"></a><br><style>.mapouter{position:relative;text-align:right;}</style><a href="https://www.embedgooglemap.net">embed custom google map</a><style>.gmap_canvas {overflow:hidden;background:none!important;}</style></div></div>
-            </div>
-            
         </section>
-        <!-- Píe de Página -->
-        <footer>
-            <br>
-            <p>&copy; Küki en línea  | 3a. Norte Poniente No. 515 Local 3 Colonia Terán, Tuxtla Gutiérrez, Chiapas, México, CP. 29020.    
-            <adress>
-                <a href="mailto:kukienlinea@gmail.com">   Contactanos</a>
-            </adress>
-            </p>
-            <br>
+        <!-- Content section 2-->
+        <section>
+            <div class="container px-5">
+                <div class="row gx-5 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="p-5"><img class="img-fluid rounded-circle" src="./Images/cargador iphone.jpg" alt="Cargador de iphone" /></div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="p-5">
+                            <h2 class="display-4">Siempre ten cargado tu cel!</h2>
+                            <p>Cargador de iphone de 1m</p>
+                            <p>Descripción del producto:</p>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos consectetur culpa veritatis molestiae quae aliquam dolore animi harum dolorum! Unde doloremque natus vero modi excepturi adipisci obcaecati itaque rem ea?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Content section 3-->
+        <section>
+            <div class="container px-5">
+                <div class="row gx-5 align-items-center">
+                    <div class="col-lg-6 order-lg-2">
+                        <div class="p-5"><img class="img-fluid rounded-circle" src="./Images/cargador tipo c.jpg" alt="..." /></div>
+                    </div>
+                    <div class="col-lg-6 order-lg-1">
+                        <div class="p-5">
+                            <h2 class="display-4">Para todo tipo de entradas..</h2>
+                            <p>Cargador Tipo C</p>
+                            <p>Descripción del producto:</p>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos consectetur culpa veritatis molestiae quae aliquam dolore animi harum dolorum! Unde doloremque natus vero modi excepturi adipisci obcaecati itaque rem ea?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="py-5 bg-black">
+            <div class="container px-5"><p class="m-0 text-center text-white small">&copy; Küki en línea  | 3a. Norte Poniente No. 515 Local 3 Colonia Terán, Tuxtla Gutiérrez, Chiapas, México, CP. 29020.    
+                <adress>
+                    <a href="mailto:kukienlinea@gmail.com">   Contactanos   </a>
+                </adress> 
+                    <a href="https://www.facebook.com/kukienlinea/"><img src="./Images/facebook-free-icon-font-bco.png" alt="facebook icon"></a> <a href="https://www.instagram.com/kukienlinea/"><img src="./Images/instagram-free-icon-font-bco.png" alt="instagram icon"></a><a href="https://api.whatsapp.com/send?phone=529611650194"><img src="./Images/whatsapp-free-icon-font-bco.png" alt="whatsapp icon"></a>
+            </div>
         </footer>
-
-    </div>
-
-
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-
-</body>
+        <!-- Bootstrap core JS-->
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
 </html>
