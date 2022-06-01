@@ -2,82 +2,39 @@
     margin: 0;
     padding: 0;
 }
-/*--------- Contenedor de Grid-------- */
-#gridContainer{
-    display: grid;
-    grid-template-areas: 
-        "logo menu menu"
-        "info info info"
-        "pie pie pie";
-    height: 100vh;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 70px auto auto;
-}
-/*----------- Contenedor de Logo ---------*/
-header {
-    background: white;
-    box-shadow: rgba(33, 35, 38, 0.1) 0px 20px 20px -20px;
+
+/* ------Menu de navegacion---- */
+.nav {
     display: flex;
-    justify-content: left;
-    align-items: center;
-    padding-left: 30px;
-    grid-area: logo;
-}
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    height: 58px;
+  } 
+  
+  .nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none; 
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  }
 
-header img{/* Foto Logo */
-    height: 48px;
-}
-
-/*------------ Contenedor del Menú ------------*/
-nav{
-    background: white;
-    box-shadow: rgba(33, 35, 38, 0.1) 0px 20px 20px -20px;
-    grid-area: menu;
+.navbar {
+    position: relative;
     display: flex;
-    justify-content: right;
-    padding-right: 30px;
+    flex-wrap: wrap;
     align-items: center;
-    font-family: 'Rubik', sans-serif;
-}
+    justify-content: space-between;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background: rgba( 255, 254, 254, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+} 
 
-    nav ul{/* Menú */
-        list-style: none;
-        display: flex;
-    }
-
-    nav ul a{/* link de Menú */
-        text-decoration: none;
-        font-size: 18px;
-        color: #26BCEB;
-        padding: 12px 40px;
-        display: block;
-    }
-
-    nav ul a:hover{/* cuando paso encima del Menú */
-        color:#EF7B3D;
-        font-weight: 700;
-    }
-
-    nav ul ul{/* Submenú */
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        background-color: white;
-        color:#EF7B3D;
-        display: none;
-    }
-
-    nav ul li:hover ul{/* Encima del submenú */
-        display:block;
-    }
-    
-    nav div{/* Carrito y usuario */
-        display: flex;
-    }
-
-    nav div a{
-        padding: 15px;
-    }
 
 /* ------------cuerpo de la pagina -------------*/
 body { 
@@ -88,51 +45,15 @@ body {
     font-family: 'Rubik', sans-serif;
 }
 
-/*------------ Grid del Contenido Principal -----------*/
-main{
-    grid-area: info;
-}
 
-    main h1{/* Título */
-        text-align: center;
-        margin-top: 40px;
-        font-size: 25px;
-    }
-
-    .container {/* contenedor de galería */
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        margin-bottom: 35px;
-        justify-content: center;
-        max-width: 1200px;
-        margin: 0 auto;
-        margin-top: 35px;
-        margin-bottom: 35px;
-        gap: 50px;
-        animation: aparecer 3s;
-    }
-        
-    .container div{
-            margin: 0 auto;
-        } 
-    
-    .gadgetsImg {/* Imagen de producto */
-        width: 100%;
-        transform: scale(1,1);
-        }
-
-    .gadgetsImg:hover{
-        transform: scale(1.025,1.025);
-    }
 /*------------ Píe de página -----------*/        
 footer{
-    background-image: linear-gradient(60deg, black, #1f1e1f, #353435);
+    background-image: linear-gradient(60deg, black, #1f1e1f, #353435);;
     color: #cef0fa;
     grid-area: pie;
     display:flex;
     justify-content: center;
     align-items: center;
-    font-size: 13px;
     padding: 20px;
 }
 
@@ -147,35 +68,13 @@ footer a:hover{
     color:#26BCEB
 }
 
-/* ------------Media Queries ------------- */
-@media (min-width: 375px) and (max-width: 600px) {/* Pantalla de Celular */
-    #gridContainer {
-        grid-template-rows: 42px auto auto auto 600px auto;/* contenedor del grid */
-    } 
-
-    header {/* Contenedor del Logo */
-        padding-left: 10px;
-    }
-    header img{/* imagen */
-        height: 25px;
-    }
-    nav{/* Menú */
-        padding-right: 0px;
-    }
-    nav ul a{/* link menú */
-        font-size: 15px;
-        padding: 8px;
-    }
-
-    main h1 {/* los titulos de las secciones */
-        font-size: 20px;
-    }
-    .container {
-        grid-template-columns: 1fr 1fr;
-        width: 90%;
-        gap: 25px;
-    }
+footer a{
+    margin-right: 10px;
 }
+footer img{
+    margin-right: 10px;
+}
+
 
 /* --------------Animaciones y efectos--------- */
 @keyframes aparecer {/* de los botones */
