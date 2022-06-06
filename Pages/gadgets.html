@@ -5,100 +5,276 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Küki | Gadgets</title>
-    <link rel="stylesheet" href="../CSS/gadgets.css">
+    <!-- Logo en el tab del explorador -->
+    <link rel="shortcut icon" href="../Images/logoTab.png"> 
+    <!-- Fuente de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/gadgets.css">
 </head>
 <body>
-    <!-- Contenedor del grid -->
-    <div id="gridContainer">
-        <!-- Contenedor del Logo -->
-        <header>
-            <a href="../index.html"><img src="../Images/Logo Kuki.png" alt="logokuki" ></a>
-        </header>
-        <!-- Contenedor de Menú -->
-        <nav>
-            <ul><!-- Opciones del Menú -->
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="#">Productos</a>
-                    <ul>
-                        <li><a href="./Audio.html">Audio</a></li>
-                        <li><a href="./AccesoriosDeCelular.html">Accesorios de Celular</a></li>
-                        <li><a href="./gadgets.html">Gadgets</a></li>
-                    </ul></li>
-                <li><a href="./contacto.html">Contacto</a></li>
-            </ul>
-            <div><!-- iconos de carrito y usuario -->
-                <a href="#"><img src="../Images/shopping-cart-icon.png" height="18px"></a></li>
-                <a href="../index.html#usuarionuevo"><img src="../Images/user-icon.png" height="18px"></a></li>
+    <!-- Menú de navegación-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="../index.html"><img src="../Images/Logo Kuki.png" alt="Logo Kuki"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tienda</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./Audio.html">Audio</a></li>
+                            <li><a class="dropdown-item" href="./AccesoriosDeCelular.html">Accesorios de Celular</a></li>
+                            <li><a class="dropdown-item" href="#top">Gadgets</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <button class="btn btn-outline-dark" type="submit">
+                        <i class="bi-cart-fill me-1"></i>
+                        Carrito
+                        <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                    </button>
+                </form>
             </div>
-        </nav>
-        <!-- Contenido GEneral -->
-        <main>
-            <h1>Gadgets</h1>
+        </div>
+    </nav> 
 
+    <!-- Header-->
+    <header class="bg-light py-5">
+        <div class="container px-4 px-lg-5 my-5">
+            <div class="text-center text-black">
+                <h1 class="display-4 fw-bolder">Gadgets</h1>
+                <p class="lead fw-normal text-black-50 mb-0">Ten los mejores gadgets</p>
+            </div>
+        </div>
+    </header>
+    <!-- Gadgets-->
+    <section class="py-5">
+        <div class="container px-4 px-lg-5 mt-2">
+            <div class="row gx-4 gx-lg-4 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Sale badge-->
+                        <div class="badge bg-black text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Nuevo</div>
+                        <!-- Product image-->
+                        <img class="card-img-top" src="../Images/Gadgets/01alcancia.jpg" alt="Alcancía Digital Rosa" />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Alcancía Digital Rosa</h5>
+                                <!-- Product price-->
+                                $450.00 MXN
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-info mt-auto" href="#">Agrega al carrito</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Sale badge-->
+                        <div class="badge bg-danger text-white position-absolute" style="top: 0.5rem; right: 0.5rem">-10%</div>
+                        <!-- Product image-->
+                        <img class="card-img-top" src="../Images/Gadgets/02Smartband.jpg" alt="Smartband" />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Smartband</h5>
+                                <!-- Product reviews-->
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                </div>
+                                <!-- Product price-->
+                                <span class="text-muted text-decoration-line-through">$500.00 MXN</span>
+                                $400.00 MXN
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-info mt-auto" href="#">Agregar al carrito</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Sale badge-->
+                        <div class="badge bg-black text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Nuevo</div>
+                        <!-- Product image-->
+                        <img class="card-img-top" src="../Images/Gadgets/03CobraRedragon.jpg" alt="Cobra Redragon" />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Mouse Gamer Cobra Mca. Redragon</h5>
+                                <!-- Product price-->
+                                $435.00 MXN
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-info mt-auto" href="#">Agregar al carrito</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top" src="../Images/Gadgets/04termoInteligente.jpg" alt="Termo Inteligente" />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Termo inteligente</h5>
+                                <!-- Product reviews-->
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                </div>
+                                <!-- Product price-->
+                                $200.00MXN
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-info mt-auto" href="#">Agregar al carrito</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Sale badge-->
+                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Nuevo</div>
+                        <!-- Product image-->
+                        <img class="card-img-top" src="../Images/Gadgets/05Lampara.jpg" alt="Lámpara de mano" />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Lámpara Led para bicicleta</h5>
+                                <!-- Product price-->
+                                $50.00 MXN
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-info mt-auto" href="#">Agregar al carrito</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top" src="../Images/Gadgets/06Lampara.jpg" alt="Lámpara bici" />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Lampara para bicicleta</h5>
+                                <!-- Product price-->
+                                $50.00 MXN
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-info mt-auto" href="#">Agregar al carrito
+                            </a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top" src="../Images/Gadgets/07Bluetoothcarro.jpg" alt="Bluetooth Carro" />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Bluetooth para carro</h5>
+                                <!-- Product reviews-->
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                </div>
+                                <!-- Product price-->
+                                $120.00 MXN
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-info mt-auto" href="#">Agregar al carrito</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top" src="../Images/Gadgets/08alcancia.jpg" alt="Alcancia Verde" />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Alcancía Digital Verde</h5>
+                                <!-- Product reviews-->
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                </div>
+                                <!-- Product price-->
+                                $450.00 MXN
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-info mt-auto" href="#">Agregar al carrito</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="container"><!-- productos -->
-        <div>
-            <img src="../Images/Gadgets/01alcancia.jpg" alt="Alcancia" class="gadgetsImg">
-            <p>
-                <img src="../Images/Audio/carrito-de-compra-anadir.png" alt="carrito de compras" height="16px"class="carrito">
-            </p>
-        </div>
-        <div>
-            <img src="../Images/Gadgets/02Smartband.jpg" alt="Smartband" class="gadgetsImg">
-            <p>
-                <img src="../Images/Audio/carrito-de-compra-anadir.png" alt="carrito de compras" height="16px"class="carrito">
-            </p>
-        </div>
-        <div>
-            <img src="../Images/Gadgets/03CobraRedragon.jpg" alt="Cobra Redragon" class="gadgetsImg">
-            <p>
-                <img src="../Images/Audio/carrito-de-compra-anadir.png" height="16px"class="carrito">
-            </p>
-        </div>
-        <div>
-            <img src="../Images/Gadgets/04termoInteligente.jpg" alt="Termo Inteligente" class="gadgetsImg">
-            <p>
-                <img src="../Images/Audio/carrito-de-compra-anadir.png" alt="carrito de compras" height="16px"class="carrito">
-            </p>
-        </div>
-        <div>
-            <img src="../Images/Gadgets/05Lampara.jpg" alt="Lámpara LED" class="gadgetsImg">
-            <p>
-                <img src="../Images/Audio/carrito-de-compra-anadir.png" height="16px"class="carrito">
-            </p>
-        </div>
-        <div>
-            <img src="../Images/Gadgets/06Lampara.jpg" alt="Lámpara LED" class="gadgetsImg">
-            <p>
-                <img src="../Images/Audio/carrito-de-compra-anadir.png" alt="carrito de compras" height="16px"class="carrito">
-            </p>
-        </div>
-        <div>
-            <img src="../Images/Gadgets/07Bluetoothcarro.jpg" alt="Bluetooth para el Auto" class="gadgetsImg">
-            <p>
-                <img src="../Images/Audio/carrito-de-compra-anadir.png" alt="carrito de compras" height="16px"class="carrito">
-            </p>
-        </div>
-        <div>
-            <img src="../Images/Gadgets/08alcancia.jpg" alt="Alcancía tipo ATM digital" class="gadgetsImg">
-            <p>
-                <img src="../Images/Audio/carrito-de-compra-anadir.png" alt="carrito de compras" height="16px"class="carrito">
-            </p>
-        </div>
-    </div>
-
-        </main>
-        <!-- Píe de Página -->
-        <footer>
-            <br>
-            <p>&copy; Küki en línea  | 3a. Norte Poniente No. 515 Local 3 Colonia Terán, Tuxtla Gutiérrez, Chiapas, México, CP. 29020.    
+    <!-- Píe de Página -->
+    <footer>
+        <div class="container px-5">
+            <p>&copy; Küki en línea  | 3a. Norte Poniente No. 515 Local 3 Colonia Terán, Tuxtla Gutiérrez, Chiapas, México, CP. 29020.</p>
             <adress>
-                <a href="mailto:kukienlinea@gmail.com">   Contactanos</a>
-            </adress>
-            </p>
-            <br>
-        </footer>
-    </div>
+                <a href="mailto:kukienlinea@gmail.com">   Contactanos   </a>
+            </adress> 
+            <a href="https://www.facebook.com/kukienlinea/"><i class="fi fi-brands-facebook"></i></a> <a href="https://www.instagram.com/kukienlinea/"><i class="fi fi-brands-instagram"></i></a><a href="https://api.whatsapp.com/send?phone=529611650194"><i class="fi fi-brands-whatsapp"></i></a>
+                  
+        </div>
+    </footer>
+    <!-- Core theme JS-->
+    <!-- <script src="js/scripts.js"></script> -->
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    
 
 
 </body>
