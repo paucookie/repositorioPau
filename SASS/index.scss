@@ -1,0 +1,250 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@import './vars.scss';
+@import url('https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css');
+
+/* ----------Cuerpo de la página------ */
+body { 
+    @include bgbody;
+    font-family: 'Rubik', sans-serif;
+}
+/* ------Menú de navegación------ */
+.navbar{
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    div{
+        a img{
+            height: 40px;
+        }
+    }
+}
+
+/* -------Contenido Principal------- */
+main{
+    max-width: 1250px;
+    display: flex;
+    flex-direction: column;
+    margin: {
+        top: 3rem;
+        left: auto;
+        right: auto;
+    }
+    /* Boton de comprar */
+    .bComprar{
+        min-width: 250px;
+        width: 250px;
+        height: 50px;
+        color:$light;
+        padding: 5px 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        display: inline-block;
+        outline: none;
+        border-radius: 5px;
+        border: none;
+        background-image: $gradient;
+        box-shadow: 0 5px #ED6F14;
+        margin: {
+            left: auto;
+            right: auto;
+            top: -6rem;
+        }
+        animation: aparecer 1s;
+        font: {
+            size:20px;
+            weight:$bold;
+            family: $fuentePrincipal;
+        }
+        &:hover{
+            box-shadow: 0 3px #ED6F14;
+            top: 5px;
+        }
+        &:active {
+            box-shadow: 0 0 #ED6F14;
+            top: 5px;
+        }
+    }
+}
+/* Redes Sociales */
+.banner {
+    background: $dark;
+    color: $light;
+    margin-top: 3rem;
+    padding-top: 1rem;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    ul{
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+        a{
+            text-decoration: none;
+        }
+    }
+    h2{
+        text-align: center;
+        font: {
+            weight:$thin;
+        }
+    }
+    .fi{
+        color: $light;
+        font-size: 30px;
+    }
+}
+
+/* ------Productos Nuevos------- */
+
+#productosNuevos {
+    background-color: $colorSecundario;
+    font-family: $fuentePrincipal;
+}
+
+/* ---------Usuario Nuevo y Mapa---------- */
+.usymapa{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 3rem auto;
+    max-width: 1250px;
+    .usuarioNuevo{
+        margin: 0 auto;
+        padding: 1rem;
+        width: 80%;
+        h4{
+            font-size: medium;
+        }
+        label{
+            padding:0.25rem 0;
+        }
+        input{
+            border-radius: 10px;
+            background-color: #f8f8f8;
+            border: none;
+            padding: 16px 20px;
+            width: 90%;
+        }
+        input[type=radio]{
+            padding: 0;
+            margin-left: 10px;
+            width: 30px;
+        }
+        .bEnviar {
+            color:$light;
+            padding: 5px 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-block;
+            outline: none;
+            background-image: $gradient;
+            box-shadow: 0 5px #ED6F14;
+            font: {
+                size:medium;
+                weight:$normal;
+                family: $fuentePrincipal;
+            }
+            &:hover{
+                box-shadow: 0 3px #ED6F14;
+                top: 5px;
+            }
+            &:active {
+                box-shadow: 0 0 #ED6F14;
+                top: 5px;
+            }
+        }
+    }
+
+    .mapa{
+        margin: 0 auto;
+    }
+}
+
+footer{
+    background-image: $gradientDark;
+    color: $bluelight;
+    padding-top: 20px;
+    font-size: small;
+    padding-bottom: 20px;
+    text-align: center;
+    p{
+        margin: 0;
+    }
+    a{
+        text-decoration: none;
+        font-weight: $bold;
+        color: $bluelight;
+        cursor: pointer;
+        :hover{
+            color:$blue
+        }
+        i{
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+    }
+}
+
+/* ------Responsive ---------- */
+@media (max-width: 600px) {
+    /* Boton de Comprar */
+    main {
+        margin-top: 4.5rem;
+        .bComprar{
+            width: 50px;
+            height: 40px;
+            font-size: small;
+            margin: {
+                top: auto;
+            }
+        }
+    }
+    
+    .banner{
+        margin-top: 2rem;
+        padding-top: 1rem;
+        h2{
+            font-size:medium;
+        }
+    }
+
+    #productosNuevos{
+        padding-top: -4rem;
+    }
+    
+    .usymapa{
+        grid-template-columns: 1fr;
+        width: 80%;
+        .usuarioNuevo{
+            padding: 0;
+            width: 100%;
+            padding-bottom: 1.5rem;
+        }
+        .gmap_canvas{
+            margin: 0 auto;
+            width: 250px;
+            height: 250px;
+        }
+    }
+}
+
+
+/* --------------Animaciones y efectos--------- */
+@keyframes aparecer {/* de los botones */
+    0%{
+        opacity: 0%;
+    }
+    50%{
+        opacity: 50%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
