@@ -56,7 +56,7 @@ main .bComprar {
   position: relative;
   display: inline-block;
   outline: none;
-  border-radius: 5px;
+  border-radius: 15px;
   border: none;
   background-image: linear-gradient(315deg, #833ab4 0%, #fd1d1d 50%, #fcb045);
   -webkit-box-shadow: 0 5px #ED6F14;
