@@ -196,7 +196,7 @@ section.gridContacto{
         }
     }
     .contactEmail{
-        @extend .card;
+        @extend .cardContact;
         grid-area: email;
         text-align: center;
         color: map-get($map: $colors, $key: light);
@@ -207,7 +207,7 @@ section.gridContacto{
         }
     }
     .contactText{
-        @extend .card;
+        @extend .cardContact;
         grid-area: whats;
         text-align: center;
         margin: 0 auto;

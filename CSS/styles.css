@@ -70,19 +70,13 @@
   background-color: #f3873b;
 }
 
-.card, section.gridContacto .contactEmail, section.gridContacto .contactText {
+.cardContact, section.gridContacto .contactEmail, section.gridContacto .contactText {
   background-color: #f3873b;
   border-radius: 15px;
   padding: 16px;
   -webkit-box-shadow: 1px 1px 12px 0px rgba(0, 0, 0, 0.3);
           box-shadow: 1px 1px 12px 0px rgba(0, 0, 0, 0.3);
   max-width: 315px;
-}
-
-@media (max-width: 600px) {
-  .card, section.gridContacto .contactEmail, section.gridContacto .contactText {
-    width: 300px;
-  }
 }
 
 .buttonSlide, section.gridContacto .contactEmail button, section.gridContacto .contactText button {

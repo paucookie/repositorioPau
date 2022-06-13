@@ -57,15 +57,12 @@
     }
 }
 
-.card{
+.cardContact{
     background-color: map-get($map: $colors, $key: orange);
     border-radius: 15px;
     padding: 16px;
     box-shadow: 1px 1px 12px 0px rgba(0,0,0,0.3);
     max-width: 315px;
-    @media (max-width: 600px) {
-        width: 300px;
-    }
 }
 
 .buttonSlide {
