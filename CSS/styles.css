@@ -79,6 +79,12 @@
   max-width: 315px;
 }
 
+@media (max-width: 600px) {
+  .card, section.gridContacto .contactEmail, section.gridContacto .contactText {
+    width: 300px;
+  }
+}
+
 .buttonSlide, section.gridContacto .contactEmail button, section.gridContacto .contactText button {
   min-width: 130px;
   height: 40px;
@@ -397,6 +403,12 @@ section.gridContacto img {
     margin: 0 auto;
     width: 250px;
     height: 250px;
+  }
+  section.gridContacto {
+        grid-template-areas: "form" "email" "whats";
+  }
+  section.gridContacto .contactForm {
+    margin-bottom: 2rem;
   }
 }
 

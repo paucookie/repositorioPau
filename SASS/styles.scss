@@ -264,6 +264,15 @@ section.gridContacto{
             height: 250px;
         }
     }
+    section.gridContacto{
+        grid-template-areas: 
+        "form"
+        "email"
+        "whats";
+        .contactForm{
+            margin-bottom: 2rem;
+        }
+    }
 }
 
 
