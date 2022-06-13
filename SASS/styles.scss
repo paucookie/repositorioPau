@@ -3,8 +3,9 @@
     padding: 0;
 }
 
-@import "vars";
+@import 'vars';
 @import url('https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css');
+@import 'clases';
 
 /* ----------Cuerpo de la página------ */
 body { 
@@ -25,7 +26,7 @@ body {
     }
 }
 
-/* -------Contenido Principal------- */
+/* -------Index------- */
 main{
     max-width: 1250px;
     display: flex;
@@ -37,20 +38,10 @@ main{
     }
     /* Boton de comprar */
     .bComprar{
+        @extend .buttonGradient;
         min-width: 250px;
         width: 250px;
         height: 50px;
-        color:$light;
-        padding: 5px 10px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        position: relative;
-        display: inline-block;
-        outline: none;
-        border-radius: 15px;
-        border: none;
-        background-image: $gradient;
-        box-shadow: 0 5px #ED6F14;
         margin: {
             left: auto;
             right: auto;
@@ -59,23 +50,13 @@ main{
         animation: aparecer 1s;
         font: {
             size:20px;
-            weight:$bold;
-            family: $fuentePrincipal;
-        }
-        &:hover{
-            box-shadow: 0 3px #ED6F14;
-            top: 5px;
-        }
-        &:active {
-            box-shadow: 0 0 #ED6F14;
-            top: 5px;
         }
     }
 }
 /*---------- Redes Sociales ------------*/
 .banner {
-    background: $dark;
-    color: $light;
+    background: map-get($map: $colors, $key: dark);
+    color: map-get($map: $colors, $key: light);
     margin-top: 3rem;
     padding-top: 1rem;
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -92,11 +73,11 @@ main{
     h2{
         text-align: center;
         font: {
-            weight:$thin;
+            weight:map-get($map: $weights, $key: thin);
         }
     }
     .fi{
-        color: $light;
+        color: map-get($map: $colors, $key: light);
         font-size: 30px;
     }
 }
@@ -104,7 +85,7 @@ main{
 /* ------Productos Nuevos------- */
 
 #productosNuevos {
-    background-color: $colorSecundario;
+    background-color: map-get($map: $colors, $key: colorSecundario);
     font-family: $fuentePrincipal;
 }
 
@@ -137,27 +118,9 @@ main{
             width: 30px;
         }
         .bEnviar {
-            color:$light;
-            padding: 5px 10px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            position: relative;
-            display: inline-block;
-            outline: none;
-            background-image: $gradient;
-            box-shadow: 0 5px #ED6F14;
+            @extend .buttonGradient;
             font: {
                 size:medium;
-                weight:$normal;
-                family: $fuentePrincipal;
-            }
-            &:hover{
-                box-shadow: 0 3px #ED6F14;
-                top: 5px;
-            }
-            &:active {
-                box-shadow: 0 0 #ED6F14;
-                top: 5px;
             }
         }
     }
@@ -169,7 +132,7 @@ main{
 /* --------Píe de Página--------- */
 footer{
     background-image: $gradientDark;
-    color: $bluelight;
+    color: map-get($map: $colors, $key: bluelight);
     padding-top: 20px;
     font-size: small;
     padding-bottom: 20px;
@@ -179,17 +142,85 @@ footer{
     }
     a{
         text-decoration: none;
-        font-weight: $bold;
-        color: $bluelight;
+        font-weight: map-get($map: $weights, $key: bold);
+        color: map-get($map: $colors, $key: bluelight);
         cursor: pointer;
         :hover{
-            color:$blue
+            color:map-get($map: $colors, $key: blue);
         }
         i{
             padding-right: 10px;
             padding-left: 10px;
         }
     }
+}
+
+/* --------Todas las páginas de productos ----------- */
+header{
+    background: map-get($map: $colors, $key: light);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );   
+}
+
+/*------------ Contacto --------------*/
+section.gridContacto{
+    display: grid;
+    grid-template-areas: 
+    "form email"
+    "form whats";
+    max-width: 1250px;
+    margin: 2rem auto;
+    h2{
+        text-align: center;
+    }
+    .contactForm{
+        margin: 0 auto;
+        height: fit-content;
+        grid-area: form;
+        width: 90%;
+        input{
+            border-radius: 10px;
+            background-color: map-get($map: $colors, $key: light);
+            border: none;
+            padding: 10px 15px;
+            width: 90%;
+        }
+        textarea{
+            border-radius: 10px;
+            background-color: map-get($map: $colors, $key: light);
+            border: none;
+            padding: 10px 15px;
+            width: 90%;
+        }
+        button{
+            @extend .buttonRetro;
+        }
+    }
+    .contactEmail{
+        @extend .card;
+        grid-area: email;
+        text-align: center;
+        color: map-get($map: $colors, $key: light);
+        margin: 0 auto;
+        margin-bottom: 2rem;
+        button{
+            @extend .buttonSlide;
+        }
+    }
+    .contactText{
+        @extend .card;
+        grid-area: whats;
+        text-align: center;
+        margin: 0 auto;
+        color: map-get($map: $colors, $key: light);
+        button{
+            @extend .buttonSlide;
+        }
+    }
+    img{
+        height: 100px;
+    }
+    
+
 }
 
 /* ------Responsive ---------- */

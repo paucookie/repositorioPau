@@ -7,19 +7,23 @@
 } 
 
 // Colors 
-$light: #faf6f6;
-$dark: #1d1d1d;
-$colorSecundario: #fbc3df;
-$bluelight: #cef0fa;
-$blue: #26BCEB;
-
+$colors: (
+    light: #faf6f6,
+    dark: #1d1d1d,
+    colorSecundario: #fbc3df,
+    bluelight: #cef0fa,
+    blue: #26BCEB,
+    orange: #f3873b,
+);
 
 // Weights 
-$thin: 300;
-$normal:400;
-$bold:700;
+$weights: (
+    thin:300,
+    normal:400,
+    bold:700,
+);
 
-// Gradientes 
+// Degradados 
 $gradient: linear-gradient(315deg, #833ab4 0%, #fd1d1d 50%, #fcb045);
 $gradientDark: linear-gradient(60deg, black, #1f1e1f, #353435);
 //Fonts

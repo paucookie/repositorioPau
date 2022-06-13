@@ -5,6 +5,122 @@
   padding: 0;
 }
 
+.buttonGradient, main .bComprar, .usymapa .usuarioNuevo .bEnviar {
+  color: #faf6f6;
+  padding: 5px 10px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 15px;
+  border: none;
+  background-image: linear-gradient(315deg, #833ab4 0%, #fd1d1d 50%, #fcb045);
+  -webkit-box-shadow: 0 5px #ED6F14;
+          box-shadow: 0 5px #ED6F14;
+  font-weight: 700;
+  font-family: "Rubik", sans-serif;
+}
+
+.buttonGradient:hover, main .bComprar:hover, .usymapa .usuarioNuevo .bEnviar:hover {
+  -webkit-box-shadow: 0 3px #ED6F14;
+          box-shadow: 0 3px #ED6F14;
+  top: 5px;
+}
+
+.buttonGradient:active, main .bComprar:active, .usymapa .usuarioNuevo .bEnviar:active {
+  -webkit-box-shadow: 0 0 #ED6F14;
+          box-shadow: 0 0 #ED6F14;
+  top: 5px;
+}
+
+.buttonRetro, section.gridContacto .contactForm button {
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border: 1px solid #000;
+  color: #000;
+  background: transparent;
+}
+
+.buttonRetro:hover:after, section.gridContacto .contactForm button:hover:after {
+  top: 0;
+  left: 0;
+}
+
+.buttonRetro:after, section.gridContacto .contactForm button:after {
+  content: "";
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 5px;
+  left: 5px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  background-color: #f3873b;
+}
+
+.card, section.gridContacto .contactEmail, section.gridContacto .contactText {
+  background-color: #f3873b;
+  border-radius: 15px;
+  padding: 16px;
+  -webkit-box-shadow: 1px 1px 12px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 1px 1px 12px 0px rgba(0, 0, 0, 0.3);
+  max-width: 315px;
+}
+
+.buttonSlide, section.gridContacto .contactEmail button, section.gridContacto .contactText button {
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  z-index: 0;
+  background: #fff;
+  overflow: hidden;
+  border: 2px solid;
+  border-color: #26BCEB;
+  color: #26BCEB;
+}
+
+.buttonSlide:hover, section.gridContacto .contactEmail button:hover, section.gridContacto .contactText button:hover {
+  color: #fff;
+}
+
+.buttonSlide:hover:after, section.gridContacto .contactEmail button:hover:after, section.gridContacto .contactText button:hover:after {
+  width: 100%;
+}
+
+.buttonSlide:after, section.gridContacto .contactEmail button:after, section.gridContacto .contactText button:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background: #26BCEB;
+}
+
 /* ----------Cuerpo de la página------ */
 body {
   background-color: #5AB094;
@@ -28,7 +144,7 @@ body {
   height: 40px;
 }
 
-/* -------Contenido Principal------- */
+/* -------Index------- */
 main {
   max-width: 1250px;
   display: -webkit-box;
@@ -48,39 +164,12 @@ main .bComprar {
   min-width: 250px;
   width: 250px;
   height: 50px;
-  color: #faf6f6;
-  padding: 5px 10px;
-  cursor: pointer;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  position: relative;
-  display: inline-block;
-  outline: none;
-  border-radius: 15px;
-  border: none;
-  background-image: linear-gradient(315deg, #833ab4 0%, #fd1d1d 50%, #fcb045);
-  -webkit-box-shadow: 0 5px #ED6F14;
-          box-shadow: 0 5px #ED6F14;
   margin-left: auto;
   margin-right: auto;
   margin-top: -6rem;
   -webkit-animation: aparecer 1s;
           animation: aparecer 1s;
   font-size: 20px;
-  font-weight: 700;
-  font-family: "Rubik", sans-serif;
-}
-
-main .bComprar:hover {
-  -webkit-box-shadow: 0 3px #ED6F14;
-          box-shadow: 0 3px #ED6F14;
-  top: 5px;
-}
-
-main .bComprar:active {
-  -webkit-box-shadow: 0 0 #ED6F14;
-          box-shadow: 0 0 #ED6F14;
-  top: 5px;
 }
 
 /*---------- Redes Sociales ------------*/
@@ -164,32 +253,7 @@ main .bComprar:active {
 }
 
 .usymapa .usuarioNuevo .bEnviar {
-  color: #faf6f6;
-  padding: 5px 10px;
-  cursor: pointer;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  position: relative;
-  display: inline-block;
-  outline: none;
-  background-image: linear-gradient(315deg, #833ab4 0%, #fd1d1d 50%, #fcb045);
-  -webkit-box-shadow: 0 5px #ED6F14;
-          box-shadow: 0 5px #ED6F14;
   font-size: medium;
-  font-weight: 400;
-  font-family: "Rubik", sans-serif;
-}
-
-.usymapa .usuarioNuevo .bEnviar:hover {
-  -webkit-box-shadow: 0 3px #ED6F14;
-          box-shadow: 0 3px #ED6F14;
-  top: 5px;
-}
-
-.usymapa .usuarioNuevo .bEnviar:active {
-  -webkit-box-shadow: 0 0 #ED6F14;
-          box-shadow: 0 0 #ED6F14;
-  top: 5px;
 }
 
 .usymapa .mapa {
@@ -224,6 +288,77 @@ footer a :hover {
 footer a i {
   padding-right: 10px;
   padding-left: 10px;
+}
+
+/* --------Todas las páginas de productos ----------- */
+header {
+  background: #faf6f6;
+  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+/*------------ Contacto --------------*/
+section.gridContacto {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "form email" "form whats";
+  max-width: 1250px;
+  margin: 2rem auto;
+}
+
+section.gridContacto h2 {
+  text-align: center;
+}
+
+section.gridContacto .contactForm {
+  margin: 0 auto;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: form;
+  width: 90%;
+}
+
+section.gridContacto .contactForm input {
+  border-radius: 10px;
+  background-color: #faf6f6;
+  border: none;
+  padding: 10px 15px;
+  width: 90%;
+}
+
+section.gridContacto .contactForm textarea {
+  border-radius: 10px;
+  background-color: #faf6f6;
+  border: none;
+  padding: 10px 15px;
+  width: 90%;
+}
+
+section.gridContacto .contactEmail {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: email;
+  text-align: center;
+  color: #faf6f6;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+section.gridContacto .contactText {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: whats;
+  text-align: center;
+  margin: 0 auto;
+  color: #faf6f6;
+}
+
+section.gridContacto img {
+  height: 100px;
 }
 
 /* ------Responsive ---------- */
@@ -290,4 +425,4 @@ footer a i {
     opacity: 100%;
   }
 }
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=styles.css.map */

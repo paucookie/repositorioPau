@@ -4,77 +4,115 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título de la página -->
     <title>Küki | Contacto</title>
-    <link rel="shortcut icon" href="../Images/logoTab.png"> <!-- Logo en el tab del explorador -->
-    <link rel="stylesheet" href="../CSS/constactos.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com"><!-- Fuente de Google -->
+    <!-- Logo en el tab del explorador -->
+    <link rel="shortcut icon" href="../Images/logoTab.png">
+    <!-- Fuente de Google --> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- CSS-->
+    <link href="../CSS/styles.css" rel="stylesheet" />
 </head>
 <body>
-    <!-- Grid Layout -->
-    <div id="gridContainer">
-        <!-- Logo -->
-        <header>
-            <a href="../index.html"><img src="../Images/Logo Kuki.png" alt="logokuki" ></a>
-        </header>
-        <!--  Menú -->
-        <nav>
-            <ul><!-- Opciones del Menú -->
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="#">Productos</a>
-                    <ul>
-                        <li><a href="./Audio.html">Audio</a></li>
-                        <li><a href="./AccesoriosDeCelular.html">Accesorios de Celular</a></li>
-                        <li><a href="./gadgets.html">Gadgets</a></li>
-                    </ul></li>
-                <li><a href="./contacto.html">Contacto</a></li>
-            </ul>
-            <div><!-- iconos de carrito y usuario -->
-                <a href="#"><img src="../Images/shopping-cart-icon.png" height="18px"></a></li>
-                <a href="../index.html#usuarionuevo"><img src="../Images/user-icon.png" height="18px"></a></li>
+    <!-- Menú de navegación-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="../index.html"><img src="../Images/Logo Kuki.png" alt="Logo Kuki"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tienda</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#top">Audio</a></li>
+                            <li><a class="dropdown-item" href="./AccesoriosDeCelular.html">Accesorios de Celular</a></li>
+                            <li><a class="dropdown-item" href="./gadgets.html">Gadgets</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <button class="btn btn-outline-dark" type="submit">
+                        <i class="bi-cart-fill me-1"></i>
+                        Carrito
+                        <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                    </button>
+                </form>
             </div>
-        </nav>
-        <!-- Contenido Principal -->
-        <main>
-            <div class="contactForm"><!-- Contenedor de formulario -->
-                <div class="formulario">
-                    <h1>Contactáctanos</h1>
-                    <h3>Escríbenos y en breve nos pondremos en contacto contigo.</h3>
-    
-                    <form action="submit-form.php" methods="get" enctype="text/plain">
-                        <p><!-- Nombre -->
-                            <label for="nombre" class="colocarNombre">Nombre</label>
-                            <input type="text" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
-                        </p>
-                        <p><!-- E-mail -->
-                            <label for="email" class="colocarEmail">E-mail</label>
-                            <input type="email" id="email" placeholder="Escribe tu e-mail" required="obligatorio">
-                        </p>
-                        <p><!-- Teléfono -->
-                            <label for="telefono" class="colocarTelefono">Teléfono</label>
-                            <input type="tel" id="telefono" placeholder="Escribe tu teléfono">
-                        </p>
-                        <p><!-- Asunto -->
-                           <label for="asunto" class="colocarAsunto">Asunto</label> 
-                           <input type="text" id="asunto" placeholder="Escribe tu asunto">
-                        </p>
-                        <p><!-- Mensaje -->
-                            <label for="mensaje" class="colocarMensaje">Mensaje</label>
-                            <textarea class="textoMensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea>
-                        </p><!-- Botón de enviar -->
-                        <button type="submit" id="enviar"><p>Enviar</p></button>
-                    </form>
-                </div>
+        </div>
+    </nav>
+
+    <!-- Header-->
+    <header class="py-5">
+        <div class="container px-4 px-lg-5 my-5">
+            <div class="text-center text-black">
+                <h1 class="display-4 fw-bolder">Contáctanos</h1>
+                <p class="lead fw-normal text-black-50 mb-0">Escribenos y en breve nos pondremos en contacto contigo.</p>
             </div>
-    
-            <aside class="mapa">
-                <!-- Mapa de Google a lado -->
-                <div class="mapouter"><div class="gmap_canvas"><iframe  id="gmap_canvas" src="https://maps.google.com/maps?q=kuki&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" height="500" width="600"></iframe><a href="https://123movies-a.com"></a><br><style>.mapouter{text-align:right;}</style><a href="https://www.embedgooglemap.net">embed custom google map</a><style>.gmap_canvas {overflow:hidden;background:none!important;}</style></div></div>
-                    
-            </aside>
-    
-        </main>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <section class="gridContacto">
+        <div class="contactForm"><!-- Contenedor de formulario -->
+            <div class="formulario">
+                <h2>Contáctanos</h2>
+                <form action="submit-form.php" methods="get" enctype="text/plain">
+                    <!-- Nombre -->
+                    <p><label for="nombre" class="colocarNombre">Nombre</label></p>
+                    <p>
+                        <input type="text" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
+                    </p>
+                    <!-- E-mail -->
+                    <p><label for="email" class="colocarEmail">E-mail</label></p>
+                    <p>
+                        <input type="email" id="email" placeholder="Ingresa tu email" required="obligatorio">
+                    </p>
+                    <!-- Teléfono -->
+                    <p><label for="telefono" class="colocarTelefono">Celular</label></p>
+                    <p>
+                        <input type="tel" id="telefono" placeholder="Ingresa tu número de celular">
+                    </p>
+                    <!-- Asunto -->
+                    <p><label for="asunto" class="colocarAsunto">Asunto</label></p>
+                    <p>
+                        <input type="text" id="asunto" placeholder="Escribe tu asunto">
+                    </p>
+                    <!-- Mensaje -->
+                    <p><label for="mensaje" class="colocarMensaje">Mensaje</label></p>
+                    <p>
+                        <textarea class="textoMensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea>
+                    </p>
+                    <!-- Botón de enviar -->
+                    <button type="submit" id="enviar"><p>Enviar</p></button>
+                </form>
+            </div>
+        </div>
+
+        <aside class="mapa">
+            <div class="contactEmail">
+                <img src="../Images/Contacto/undraw_opinion_re_jix4.svg" alt="Email">
+                <h2>E-mail</h2>
+                <p>Respuesta en menos de dos días habiles.</p>
+                <button>Mandanos un email</button>
+            </div>
+            <div class="contactText">
+                <img src="../Images/Contacto/undraw_details_8k13.svg" alt="Text">
+                <h2>Texteanos</h2>
+                <p>Escribenos en tiempo real, horario de 9:00 a 18:00 hrs.</p>
+                <button>Whatsapp</button>
+            </div>
+        </aside>
+
+    </section>
+       
         <!-- Píe de página -->
         <footer>
             <br>
