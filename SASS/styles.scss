@@ -138,24 +138,48 @@ main{
 footer{
     background-image: $gradientDark;
     color: map-get($map: $colors, $key: bluelight);
-    padding-top: 20px;
+    padding-top: 30px;
     font-size: small;
-    padding-bottom: 20px;
-    text-align: center;
-    p{
-        margin: 0;
-    }
-    a{
-        text-decoration: none;
-        font-weight: map-get($map: $weights, $key: bold);
-        color: map-get($map: $colors, $key: bluelight);
-        cursor: pointer;
-        :hover{
-            color:map-get($map: $colors, $key: blue);
+    padding-bottom: 30px;
+    .footerRow{
+        display: flex;
+        justify-content: space-between;
+        .footerCol{
+            display: flex;
+            flex-direction: column;
+            .footerSection{
+                font-weight: map-get($map: $weights, $key: bold);
+            }
+            .footerSub{
+                font-weight: map-get($map: $weights, $key: thin);
+            }
         }
-        i{
-            padding-right: 10px;
-            padding-left: 10px;
+        a {
+            text-decoration: none;
+            color: map-get($map: $colors, $key: bluelight);
+            cursor: pointer;
+            &:hover{
+                color: map-get($map: $colors, $key: blue);
+            }
+        }
+        .footerCol2{
+            border-left: solid 0.5px map-get($map: $colors, $key: bluelight);
+            text-align: center;
+            padding-left: 30px;
+            img{
+                height: 40px;
+                margin-bottom: 10px;
+            }
+            i{
+                padding: 10px;
+            }
+            div{
+                margin-bottom: 10px;
+            }
+            p{
+                margin-bottom: 0px;
+                font-weight: map-get($map: $weights, $key: thin);
+            }
         }
     }
 }
@@ -276,6 +300,17 @@ section.gridContacto{
         "whats";
         .contactForm{
             margin-bottom: 2rem;
+        }
+    }
+    footer{
+        .footerRow{
+            .footerCol{
+                display: none;
+            }
+            .footerCol2{
+                border-left: none;
+                padding-left: 0px;
+            }
         }
     }
 }

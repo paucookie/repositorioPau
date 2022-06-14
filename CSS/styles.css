@@ -270,30 +270,70 @@ main .bComprar {
 footer {
   background-image: linear-gradient(60deg, black, #1f1e1f, #353435);
   color: #cef0fa;
-  padding-top: 20px;
+  padding-top: 30px;
   font-size: small;
-  padding-bottom: 20px;
-  text-align: center;
+  padding-bottom: 30px;
 }
 
-footer p {
-  margin: 0;
+footer .footerRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-footer a {
-  text-decoration: none;
+footer .footerRow .footerCol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer .footerRow .footerCol .footerSection {
   font-weight: 700;
+}
+
+footer .footerRow .footerCol .footerSub {
+  font-weight: 300;
+}
+
+footer .footerRow a {
+  text-decoration: none;
   color: #cef0fa;
   cursor: pointer;
 }
 
-footer a :hover {
+footer .footerRow a:hover {
   color: #26BCEB;
 }
 
-footer a i {
-  padding-right: 10px;
-  padding-left: 10px;
+footer .footerRow .footerCol2 {
+  border-left: solid 0.5px #cef0fa;
+  text-align: center;
+  padding-left: 30px;
+}
+
+footer .footerRow .footerCol2 img {
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+footer .footerRow .footerCol2 i {
+  padding: 10px;
+}
+
+footer .footerRow .footerCol2 div {
+  margin-bottom: 10px;
+}
+
+footer .footerRow .footerCol2 p {
+  margin-bottom: 0px;
+  font-weight: 300;
 }
 
 /* --------Todas las páginas de productos ----------- */
@@ -409,6 +449,13 @@ section.gridContacto img {
   }
   section.gridContacto .contactForm {
     margin-bottom: 2rem;
+  }
+  footer .footerRow .footerCol {
+    display: none;
+  }
+  footer .footerRow .footerCol2 {
+    border-left: none;
+    padding-left: 0px;
   }
 }
 
