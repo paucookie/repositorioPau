@@ -204,7 +204,7 @@ section.gridContacto{
     .contactForm{
         margin: 0 auto;
         height: fit-content;
-        grid-area: form;
+        grid-area:form;
         width: 90%;
         input{
             border-radius: 10px;
@@ -226,7 +226,7 @@ section.gridContacto{
     }
     .contactEmail{
         @extend .cardContact;
-        grid-area: email;
+        grid-area:email;
         text-align: center;
         color: map-get($map: $colors, $key: light);
         margin: 0 auto;
@@ -237,7 +237,7 @@ section.gridContacto{
     }
     .contactText{
         @extend .cardContact;
-        grid-area: whats;
+        grid-area:whats;
         text-align: center;
         margin: 0 auto;
         color: map-get($map: $colors, $key: light);
@@ -307,6 +307,9 @@ section.gridContacto{
             .footerCol{
                 display: none;
             }
+
+
+
             .footerCol2{
                 border-left: none;
                 padding-left: 0px;
