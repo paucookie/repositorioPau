@@ -446,6 +446,22 @@ section.gridContacto img {
   }
   section.gridContacto .contactForm {
     margin-bottom: 2rem;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: form;
+  }
+  section.gridContacto .contactForm h2 {
+    display: none;
+  }
+  section.gridContacto .contactEmail {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: email;
+  }
+  section.gridContacto .contactText {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: whats;
   }
   footer .footerRow .footerCol {
     display: none;

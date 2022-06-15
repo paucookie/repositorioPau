@@ -170,6 +170,7 @@ footer{
             }
             i{
                 padding: 10px;
+                
             }
             div{
                 margin-bottom: 10px;
@@ -298,7 +299,17 @@ section.gridContacto{
         "whats";
         .contactForm{
             margin-bottom: 2rem;
+            grid-area:form;
+            h2{
+                display: none;
+            }
         }
+        .contactEmail{
+            grid-area:email;
+        }
+        .contactText{
+            grid-area:whats;
+        }    
     }
     footer{
         .footerRow{
